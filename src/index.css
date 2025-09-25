@@ -2,136 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern To-Do App Design System - Sleek Blue Light Theme */
+/* Modern Credit Scoring App - Blue & White Theme */
 
 @layer base {
   :root {
-    /* Base Colors - Clean Light Theme */
-    --background: 255 255 255;
-    --foreground: 30 41 59;
+    /* Background & Text */
+    --background: 0 0% 100%;        /* White */
+    --foreground: 220 15% 15%;      /* Almost Black for readable text */
 
-    /* Card System */
-    --card: 255 255 255;
-    --card-foreground: 30 41 59;
-    --card-hover: 248 250 252;
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --card-hover: 210 100% 98%;     /* Soft light blue hover */
 
-    /* Brand Colors - Sleek Blue Theme */
-    --primary: 224 76% 33%;        /* #1E3A8A - Dark Blue */
-    --primary-foreground: 255 255 255;
-    --primary-hover: 224 76% 28%;   /* Darker on hover */
+    /* Primary Blue */
+    --primary: 213 94% 52%;         /* #3B82F6 (Bright Blue) */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 94% 46%;   /* Darker Blue on hover */
 
-    /* Secondary Brand */
-    --secondary: 213 94% 68%;       /* #3B82F6 - Medium Blue */
-    --secondary-foreground: 255 255 255;
-    --secondary-hover: 213 94% 63%; /* Darker on hover */
+    /* Secondary Blue */
+    --secondary: 224 76% 33%;       /* Deep Navy Blue */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 224 76% 28%;
 
-    /* Accent Colors */
-    --accent: 213 93% 78%;          /* #93C5FD - Light Blue */
+    /* Accent Blue */
+    --accent: 213 93% 78%;          /* Light Blue */
     --accent-foreground: 224 76% 33%;
     --accent-hover: 213 93% 73%;
 
-    /* Status Colors */
-    --success: 142 76% 36%;
-    --success-foreground: 255 255 255;
-    --success-light: 142 76% 95%;
+    /* Footer Colors */
+    --footer-background: 224 76% 33%;   /* Deep Navy */
+    --footer-foreground: 0 0% 100%;     /* White text */
+    --footer-hover: 213 94% 52%;        /* Bright Blue hover links */
 
-    --warning: 38 92% 50%;
-    --warning-foreground: 255 255 255;
-    --warning-light: 38 92% 95%;
+    /* Borders & Rings */
+    --border: 220 13% 91%;
+    --ring: 213 94% 52%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 255 255 255;
-    --destructive-hover: 0 84% 54%;
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(213 94% 52% / 0.15), 
+                   0 2px 4px -1px hsl(213 94% 52% / 0.1);
 
-    /* Neutral Palette */
-    --muted: 220 13% 91%;          /* #E5E7EB - Light Gray */
-    --muted-foreground: 220 13% 46%; /* #6B7280 - Gray */
-    --neutral: 220 13% 46%;
-    --neutral-light: 220 13% 91%;
-
-    /* Interactive Elements */
-    --border: 220 13% 91%;         /* #E5E7EB */
-    --input: 220 13% 91%;
-    --ring: 213 94% 68%;           /* Blue ring for focus */
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(224 76% 33%), hsl(213 94% 68%));
-    --gradient-secondary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 93% 78%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(160 84% 39%));
-
-    /* Enhanced Shadows with Blue Tints */
-    --shadow-sm: 0 1px 2px 0 hsl(224 76% 33% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(224 76% 33% / 0.1), 0 2px 4px -1px hsl(224 76% 33% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(224 76% 33% / 0.1), 0 4px 6px -2px hsl(224 76% 33% / 0.05);
-    --shadow-card: 0 1px 3px 0 hsl(224 76% 33% / 0.1), 0 1px 2px 0 hsl(224 76% 33% / 0.06);
-    --shadow-focus: 0 0 0 3px hsl(213 94% 68% / 0.2);
-
-    /* Smooth Animations */
-    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-
+    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
   }
 
   body {
@@ -140,119 +53,61 @@
 }
 
 @layer components {
-  /* Enhanced Todo App Components with Blue Theme */
-  .todo-card {
-    @apply bg-card border border-border rounded-xl shadow-card 
-           hover:shadow-md hover:bg-card-hover 
-           transition-smooth cursor-pointer;
-  }
-
-  .todo-card-completed {
-    @apply bg-success-light border-success/20;
-  }
-
+  /* Buttons */
   .btn-primary {
     @apply bg-primary text-primary-foreground 
            hover:bg-primary-hover 
-           focus:ring-4 focus:ring-ring focus:ring-opacity-20
-           transition-smooth;
+           focus:ring-4 focus:ring-ring focus:ring-opacity-30 
+           rounded-lg px-4 py-2 font-medium transition-base;
   }
 
   .btn-secondary {
     @apply bg-secondary text-secondary-foreground 
            hover:bg-secondary-hover 
-           focus:ring-4 focus:ring-secondary focus:ring-opacity-20
-           transition-smooth;
+           focus:ring-4 focus:ring-ring focus:ring-opacity-30 
+           rounded-lg px-4 py-2 font-medium transition-base;
   }
 
-  .input-focus {
-    @apply focus:ring-4 focus:ring-ring focus:ring-opacity-20 
-           focus:border-ring transition-smooth;
+/* App Name (Logo) */
+.app-name {
+  @apply text-[hsl(213_94%_52%)] font-extrabold text-6xl tracking-wide;
+  text-align: center;
+  text-shadow:
+    0 0 8px rgba(59, 130, 246, 0.6),
+    0 0 16px rgba(59, 130, 246, 0.4),
+    0 0 24px rgba(59, 130, 246, 0.2);
+}
+
+
+  /* Header wrapper */
+  .header {
+    @apply w-full py-8 flex justify-center items-center;
+    background: hsl(0 0% 100% / 0.95); /* brighter overlay */
   }
 
-  .gradient-primary {
-    background: var(--gradient-primary);
+  /* Cards */
+  .card {
+    @apply bg-card text-card-foreground rounded-xl p-4 
+           shadow-card hover:shadow-lg hover:bg-card-hover transition-base;
   }
 
-  .gradient-secondary {
-    background: var(--gradient-secondary);
+  /* Footer */
+  .footer {
+    @apply bg-[hsl(var(--footer-background))] text-[hsl(var(--footer-foreground))] 
+           py-6 px-8 text-center;
   }
 
-  .gradient-success {
-    background: var(--gradient-success);
+  .footer a {
+    @apply text-[hsl(var(--footer-foreground))] hover:text-[hsl(var(--footer-hover))] 
+           transition-base font-medium;
   }
 
-  /* Enhanced Hover Effects */
-  .hover-lift {
-    @apply transition-smooth hover:translate-y-[-2px] hover:shadow-md;
-  }
-
+  /* Hover Effects */
   .hover-scale {
-    @apply transition-fast hover:scale-105;
+    @apply transition-base hover:scale-105;
   }
 
-  .interactive-element {
-    @apply transition-smooth hover:bg-neutral-light/50 
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-opacity-20;
-  }
-
-  /* Custom Animations */
-  .animate-check {
-    animation: checkmark 0.3s ease-in-out;
-  }
-
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-out;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.2s ease-out;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.2s ease-out;
-  }
-}
-
-@keyframes checkmark {
-  0% {
-    transform: scale(0.8);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
+  .hover-lift {
+    @apply transition-base hover:-translate-y-1 hover:shadow-lg;
   }
 }
